@@ -3,8 +3,6 @@ import React from 'react-native'
 let {
   StyleSheet,
   Navigator,
-  View,
-  Text
 } = React
 
 import HomeContainer from './HomeContainer'
