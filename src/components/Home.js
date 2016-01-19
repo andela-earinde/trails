@@ -4,8 +4,11 @@ let {
   Component,
   StyleSheet,
   View,
-  Text
+  Text,
+  ToolbarAndroid
 } = React
+
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 class Home extends Component {
 
@@ -17,7 +20,13 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text>Hello React Native</Text>
+          <ToolbarAndroid
+            title="Trails"
+            actions={[{
+              title: 'Search',
+              icon: <Icon name='search' color="#FFFFFF"/>,
+              show: 'always'
+            }]}/>
         </View>
         <View style={styles.body}>
           <Text>Crap me</Text>
@@ -36,11 +45,11 @@ let styles = StyleSheet.create({
 
   header: {
     alignItems: 'center',
-    backgroundColor: 'blue'
+    backgroundColor: 'blue',
+    height: 100
   },
 
   body: {
-    marginTop: 20,
     backgroundColor: 'blue'
   }
 })
