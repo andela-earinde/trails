@@ -8,7 +8,7 @@ let {
   ToolbarAndroid
 } = React
 
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 class Home extends Component {
 
@@ -19,15 +19,14 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.header}>
-          <ToolbarAndroid
-            title="Trails"
-            actions={[{
-              title: 'Search',
-              icon: <Icon name='search' color="#FFFFFF"/>,
-              show: 'always'
-            }]}/>
-        </View>
+        <ToolbarAndroid
+          style={styles.toolbar}
+          title="Trails"
+          actions={[{
+            title: 'Search',
+            show: 'always',
+            icon: require('../../assets/search100.png')
+          }]}/>
         <View style={styles.body}>
           <Text>Crap me</Text>
         </View>
@@ -45,12 +44,15 @@ let styles = StyleSheet.create({
 
   header: {
     alignItems: 'center',
+  },
+
+  toolbar: {
     backgroundColor: 'blue',
-    height: 100
+    height: 50
   },
 
   body: {
-    backgroundColor: 'blue'
+    backgroundColor: 'red'
   }
 })
 
