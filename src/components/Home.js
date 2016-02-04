@@ -12,6 +12,8 @@ let {
 
 import Icon from 'react-native-vector-icons/FontAwesome'
 
+let deviceHeight = Dimensions.get('window').height
+
 class Home extends Component {
 
   constructor(props) {
@@ -33,10 +35,11 @@ class Home extends Component {
           <ScrollView
             style={styles.scrollview}>
             {
-              [1,2,4,5,6,7,8,9].map((index) => {
+              [1,2,3,4,5,6].map((index) => {
                 return (
                   <View
-                    style={styles.button}>
+                    style={styles.button}
+                    key={index}>
                     <Text>
                       {index}
                     </Text>
@@ -63,7 +66,7 @@ let styles = StyleSheet.create({
   },
 
   toolbar: {
-    backgroundColor: 'blue',
+    backgroundColor: '#3a3f41',
     height: 50
   },
 
@@ -73,14 +76,15 @@ let styles = StyleSheet.create({
 
   scrollview: {
     backgroundColor: '#6A85B1',
-    height: 250
+    height: deviceHeight - 70
   },
 
   button: {
-    marginBottom: 7,
+    marginBottom: 1,
     padding: 5,
     alignItems: 'center',
     backgroundColor: '#eaeaea',
+    height: (deviceHeight - 50) / 4
   }
 })
 
