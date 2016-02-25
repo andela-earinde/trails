@@ -12,7 +12,13 @@ let {
 
 import Icon from 'react-native-vector-icons/FontAwesome'
 
+import ScrollCategory from './ScrollCategory'
+
 let deviceHeight = Dimensions.get('window').height
+
+const categories  = [
+  'action', 'comedy', 'horror', 'drama', 'animation', 'romance'
+]
 
 class Home extends Component {
 
@@ -35,15 +41,10 @@ class Home extends Component {
           <ScrollView
             style={styles.scrollview}>
             {
-              [1,2,3,4,5,6].map((index) => {
+              categories.map((category, index) => {
                 return (
-                  <View
-                    style={styles.button}
-                    key={index}>
-                    <Text>
-                      {index}
-                    </Text>
-                  </View>
+                  <ScrollCategory
+                    key={index}/>
                 )
               })
             }
