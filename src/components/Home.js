@@ -72,20 +72,14 @@ let styles = StyleSheet.create({
   },
 
   body: {
-    backgroundColor: 'red'
+    backgroundColor: '#eaeaea'
   },
 
   scrollview: {
-    backgroundColor: '#6A85B1',
-    height: deviceHeight - 70
-  },
-
-  button: {
-    marginBottom: 1,
-    padding: 5,
-    alignItems: 'center',
     backgroundColor: '#eaeaea',
-    height: (deviceHeight - 50) / 4
+    paddingLeft: 7,
+    paddingRight: 7,
+    height: deviceHeight - 70
   }
 })
 

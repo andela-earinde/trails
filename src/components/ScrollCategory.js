@@ -19,7 +19,7 @@ class ScrollCategory extends Component {
   render() {
     return (
       <View
-        style={styles.button}>
+        style={styles.category}>
         <Text>
           'crap'
         </Text>
@@ -29,9 +29,10 @@ class ScrollCategory extends Component {
 }
 
 let styles = StyleSheet.create({
-  button: {
-    marginBottom: 1,
+  category: {
     padding: 5,
+    borderBottomWidth: 2,
+    borderColor: '#d6d7da',
     alignItems: 'center',
     backgroundColor: '#eaeaea',
     height: (deviceHeight - 50) / 4
