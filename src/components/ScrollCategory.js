@@ -11,6 +11,17 @@ let {
 
 let deviceHeight = Dimensions.get('window').height
 
+// require doesn't support dynamic generation of path to image,
+// so they will be defined here.
+images = {
+  'action': require('../../assets/action.jpg'),
+  'comedy': require('../../assets/comedy.jpg'),
+  'horror': require('../../assets/horror.jpg'),
+  'drama': require('../../assets/drama.jpg'),
+  'animation': require('../../assets/animation.jpg'),
+  'romance': require('../../assets/romance.jpg'),
+}
+
 class ScrollCategory extends Component {
 
   constructor(props) {
@@ -23,10 +34,10 @@ class ScrollCategory extends Component {
         style={styles.category}>
         <Image
           style={styles.image}
-          source={require('../../assets/action.jpg')}>
+          source={images[this.props.category]}>
           <Text
             style={styles.imageText}>
-            ACTION
+            {this.props.category}
           </Text>
         </Image>
       </View>
@@ -36,7 +47,6 @@ class ScrollCategory extends Component {
 
 let styles = StyleSheet.create({
   category: {
-    padding: 2,
     borderBottomWidth: 2,
     borderColor: '#d6d7da',
     alignItems: 'center',
@@ -52,7 +62,8 @@ let styles = StyleSheet.create({
   },
 
   imageText: {
-    top: 20
+    top: 25,
+    color: '#ffffff'
   }
 });
 

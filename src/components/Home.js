@@ -32,6 +32,7 @@ class Home extends Component {
         <ToolbarAndroid
           style={styles.toolbar}
           title="Trails"
+          titleColor='#fff'
           actions={[{
             title: 'Search',
             show: 'always',
@@ -44,7 +45,8 @@ class Home extends Component {
               categories.map((category, index) => {
                 return (
                   <ScrollCategory
-                    key={index}/>
+                    key={index}
+                    category={category}/>
                 )
               })
             }
@@ -67,18 +69,16 @@ let styles = StyleSheet.create({
   },
 
   toolbar: {
-    backgroundColor: '#3a3f41',
+    backgroundColor: '#1B1B1B',
     height: 50
   },
 
   body: {
-    backgroundColor: '#eaeaea'
+    backgroundColor: '#1B1B1B'
   },
 
   scrollview: {
-    backgroundColor: '#eaeaea',
-    paddingLeft: 7,
-    paddingRight: 7,
+    backgroundColor: '#1B1B1B',
     height: deviceHeight - 70
   }
 })
