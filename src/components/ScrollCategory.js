@@ -23,8 +23,12 @@ class ScrollCategory extends Component {
         style={styles.category}>
         <Image
           style={styles.image}
-          source={require('../../assets/action.jpg')}
-        />
+          source={require('../../assets/action.jpg')}>
+          <Text
+            style={styles.imageText}>
+            ACTION
+          </Text>
+        </Image>
       </View>
     )
   }
@@ -41,7 +45,14 @@ let styles = StyleSheet.create({
   },
 
   image: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
     height: (deviceHeight - 50) / 4
+  },
+
+  imageText: {
+    top: 20
   }
 });
 
