@@ -62,7 +62,7 @@ let styles = StyleSheet.create({
   },
 
   imageText: {
-    top: 25,
+    top: 30,
     color: '#ffffff'
   }
 });
