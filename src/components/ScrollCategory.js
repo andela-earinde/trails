@@ -37,7 +37,7 @@ class ScrollCategory extends Component {
           source={images[this.props.category]}>
           <Text
             style={styles.imageText}>
-            {this.props.category}
+            {this.props.category.toUpperCase()}
           </Text>
         </Image>
       </View>
@@ -63,7 +63,9 @@ let styles = StyleSheet.create({
 
   imageText: {
     top: 30,
-    color: '#ffffff'
+    color: '#ffffff',
+    fontSize: 20,
+    fontFamily: 'Cochin'
   }
 });
 
